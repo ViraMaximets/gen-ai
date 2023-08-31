@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerAnalyzerTest {
 
     @Test
-    public void testCalculateScore_SinglePlayer() {
+    void testCalculateScore_SinglePlayer() {
         // Arrange
         Player player = new Player();
         player.setAge(25);
@@ -30,7 +30,7 @@ class PlayerAnalyzerTest {
     }
 
     @Test
-    public void testCalculateScore_SinglePlayer_Age15() {
+    void testCalculateScore_SinglePlayer_Age15() {
         // Arrange
         Player player = new Player();
         player.setAge(15);
@@ -49,7 +49,7 @@ class PlayerAnalyzerTest {
     }
 
     @Test
-    public void testCalculateScore_SinglePlayer_Age35() {
+    void testCalculateScore_SinglePlayer_Age35() {
         // Arrange
         Player player = new Player();
         player.setAge(35);
@@ -68,7 +68,7 @@ class PlayerAnalyzerTest {
     }
 
     @Test
-    public void testCalculateScore_MultiplePlayers() {
+    void testCalculateScore_MultiplePlayers() {
         // Arrange
         Player player1 = new Player();
         player1.setAge(25);
@@ -97,7 +97,7 @@ class PlayerAnalyzerTest {
     }
 
     @Test
-    public void testCalculateScore_NullSkills_ShouldThrowError() {
+    void testCalculateScore_NullSkills_ShouldThrowError() {
         // Arrange
         Player player = new Player();
         player.setAge(25);
@@ -113,7 +113,7 @@ class PlayerAnalyzerTest {
     }
 
     @Test
-    public void testCalculateScore_EmptyArray_ShouldReturnZero() {
+    void testCalculateScore_EmptyArray_ShouldReturnZero() {
         // Arrange
         List<Player> players = Collections.emptyList();
 
