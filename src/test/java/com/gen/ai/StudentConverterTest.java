@@ -5,13 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StudentConverterTest {
 
     @Test
-    public void testConvertStudents_Case1() {
+    void testConvertStudents_Case1() {
         // Arrange: Create a list with a student object meeting the criteria
         List<Student> students = new ArrayList<>();
         Student honorRollStudent = new Student();
@@ -28,13 +27,13 @@ class StudentConverterTest {
         assertEquals(1, convertedStudents.size());
 
         Student convertedStudent = convertedStudents.get(0);
-        assertEquals(false, convertedStudent.isExceptional());
-        assertEquals(true, convertedStudent.isHonorRoll());
-        assertEquals(false, convertedStudent.isPassed());
+        assertFalse(convertedStudent.isExceptional());
+        assertTrue(convertedStudent.isHonorRoll());
+        assertFalse(convertedStudent.isPassed());
     }
 
     @Test
-    public void testConvertStudents_Case2() {
+    void testConvertStudents_Case2() {
         // Arrange: Create a list with a student object meeting the criteria
         List<Student> students = new ArrayList<>();
         Student exceptionalStudent = new Student();
@@ -51,13 +50,13 @@ class StudentConverterTest {
         assertEquals(1, convertedStudents.size());
 
         Student convertedStudent = convertedStudents.get(0);
-        assertEquals(true, convertedStudent.isExceptional());
-        assertEquals(false, convertedStudent.isHonorRoll());
-        assertEquals(false, convertedStudent.isPassed());
+        assertTrue(convertedStudent.isExceptional());
+        assertFalse(convertedStudent.isHonorRoll());
+        assertFalse(convertedStudent.isPassed());
     }
 
     @Test
-    public void testConvertStudents_Case3() {
+    void testConvertStudents_Case3() {
         // Arrange: Create a list with a student object meeting the criteria
         List<Student> students = new ArrayList<>();
         Student passedStudent = new Student();
@@ -74,13 +73,13 @@ class StudentConverterTest {
         assertEquals(1, convertedStudents.size());
 
         Student convertedStudent = convertedStudents.get(0);
-        assertEquals(false, convertedStudent.isExceptional());
-        assertEquals(false, convertedStudent.isHonorRoll());
-        assertEquals(true, convertedStudent.isPassed());
+        assertFalse(convertedStudent.isExceptional());
+        assertFalse(convertedStudent.isHonorRoll());
+        assertTrue(convertedStudent.isPassed());
     }
 
     @Test
-    public void testConvertStudents_Case4() {
+    void testConvertStudents_Case4() {
         // Arrange: Create a list with a student object meeting the criteria
         List<Student> students = new ArrayList<>();
         Student notPassedStudent = new Student();
@@ -97,13 +96,13 @@ class StudentConverterTest {
         assertEquals(1, convertedStudents.size());
 
         Student convertedStudent = convertedStudents.get(0);
-        assertEquals(false, convertedStudent.isExceptional());
-        assertEquals(false, convertedStudent.isHonorRoll());
-        assertEquals(false, convertedStudent.isPassed());
+        assertFalse(convertedStudent.isExceptional());
+        assertFalse(convertedStudent.isHonorRoll());
+        assertFalse(convertedStudent.isPassed());
     }
 
     @Test
-    public void testConvertStudents_EmptyList() {
+    void testConvertStudents_EmptyList() {
         // Arrange: Create an empty list of students
         List<Student> students = new ArrayList<>();
 
@@ -116,7 +115,7 @@ class StudentConverterTest {
     }
 
     @Test
-    public void testConvertStudents_NullInput() {
+    void testConvertStudents_NullInput() {
         // Arrange: Create a null input
         List<Student> students = null;
 
